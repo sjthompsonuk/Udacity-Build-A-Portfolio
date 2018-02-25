@@ -1,0 +1,197 @@
+/* Common */
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+header,
+main,
+section,
+div {
+   box-sizing: border-box;
+   display: inline-block;
+ }
+
+body {
+  color: #2d3c49;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+/* Header */
+
+header {
+  width: 100%;
+  height: 100px;
+  border-bottom: #7d97ad solid medium;
+  margin-bottom: 20px;
+}
+
+header img {
+  position: absolute;
+  height: 70px;
+  margin: 15px;
+}
+
+header h1,
+header h2 {
+  margin-right: 10px;
+  text-align: right;
+}
+
+header h1 {
+  margin-top: 5px;
+}
+
+/* Picture */
+
+.picture {
+  margin-top: 10px;
+}
+
+/* Projects */
+
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+  height: auto;
+}
+
+.projects-section {
+  text-align: center;
+}
+
+.project-heading h4 {
+  margin: 0px;
+  padding: 0px;
+  color: #7d97ad;
+  font-size: 1.5em;
+}
+
+.project-heading {
+  width: 100%;
+}
+
+.project h5 {
+  padding: 10px;
+  width: 100%;
+  height: 2.5em;
+  font-size: 1.2em;
+  color: #2d3c49;
+}
+
+.project-text {
+  padding: 10px;
+}
+
+.project-image {
+  height: auto;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 450px) and (max-width: 799px) {
+  .project-image,
+  .project-text {
+    width: 50%;
+    text-align: left;
+    margin: auto 0;
+  }
+
+  .project {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .showcase {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .project {
+    width: 33.333333%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.1em;
+  }
+
+  header {
+    height: 70px;
+    margin-bottom: 8px;
+  }
+
+  header img {
+    height: 50px;
+    margin: 8px;
+  }
+}
+
+@media screen and (max-width: 240px) {
+  header img {
+    position: relative;
+  }
+
+  header {
+    height: auto;
+  }
+
+  .project h5 {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+
+  header {
+    height: 120px;
+  }
+
+  header img {
+    height: 80px;
+  }
+}
