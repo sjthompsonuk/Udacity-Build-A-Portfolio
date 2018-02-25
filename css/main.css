@@ -22,7 +22,8 @@ main,
 section,
 div {
    box-sizing: border-box;
-   display: inline-block;
+   display: flex;
+   flex-wrap: wrap;
  }
 
 body {
@@ -32,7 +33,8 @@ body {
 img {
   max-width: 100%;
   max-height: 100%;
-  display: inline-block;
+  width: 100%;
+  height: 100%;
   box-sizing: border-box;
 }
 
@@ -45,20 +47,29 @@ header {
   margin-bottom: 20px;
 }
 
-header img {
-  position: absolute;
-  height: 70px;
-  margin: 15px;
+.logo {
+  width: 20%;
+  padding: 10px;
 }
 
-header h1,
-header h2 {
+.header-text {
+  width: 80%;
+}
+
+.header-text h1,
+.header-text h2 {
   margin-right: 10px;
   text-align: right;
+  right: 0;
+  width: 100%;
 }
 
-header h1 {
+.header-text h1 {
   margin-top: 5px;
+}
+
+.header-text h2 {
+  margin-top: 15px;
 }
 
 /* Picture */
@@ -78,15 +89,21 @@ header h1 {
   height: auto;
 }
 
+.showcase {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .projects-section {
   text-align: center;
 }
 
 .project-heading h4 {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   color: #7d97ad;
   font-size: 1.5em;
+  margin: 0 auto;
 }
 
 .project-heading {
@@ -95,18 +112,15 @@ header h1 {
 
 .project h5 {
   padding: 10px;
+  vertical-align: middle;
   width: 100%;
-  height: 2.5em;
+  margin-top: 10px;
   font-size: 1.2em;
   color: #2d3c49;
 }
 
-.project-text {
+.project-text p {
   padding: 10px;
-}
-
-.project-image {
-  height: auto;
 }
 
 /* Media Queries */
@@ -120,20 +134,17 @@ header h1 {
   }
 
   .project {
-    padding: 0px;
-    margin: 0px;
     width: 100%;
   }
 }
 
 @media screen and (min-width: 800px) {
-  .showcase {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
   .project {
     width: 33.333333%;
+  }
+
+  .project-text {
+    height: 10em;
   }
 }
 
@@ -161,24 +172,36 @@ header h1 {
     height: 70px;
     margin-bottom: 8px;
   }
-
-  header img {
-    height: 50px;
-    margin: 8px;
-  }
 }
 
 @media screen and (max-width: 240px) {
-  header img {
-    position: relative;
+  .header-text h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 8px;
   }
 
-  header {
-    height: auto;
+  .header-text h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 8px;
   }
 
   .project h5 {
     height: auto;
+  }
+
+  .logo {
+    width: 100%;
+    max-height: 50px;
+  }
+
+  .header-text {
+    width: 70%;
+  }
+
+  .header {
+    height: 100px;
   }
 }
 
